@@ -1,0 +1,16 @@
+/*
+Theme name: Ma creative Agency
+Theme URI: http://promo-93.codeur.online/
+Author: ACS Lons le Saunier Yamina Joselito Marley Lucas
+Author URI: https://www.accesscodeschool.fr/
+Description: Thème wordpress créé en groupe comme projet ACS avec: Yamina, Joselito, Marley et Lucas.
+Version: 0.1
+*/
+
+header{
+    height:50vh; overflow:hidden;
+}
+nav{
+    color: blueviolet;
+    text-decoration: none;
+}
