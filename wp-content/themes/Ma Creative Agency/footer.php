@@ -9,11 +9,6 @@ wp_nav_menu ( array (
 ) ); ?>
 <?php endif;
 ?>
-
-
-
-
-    
-  
-
+ 
+<?php wp_footer() ?>
 </body></html>

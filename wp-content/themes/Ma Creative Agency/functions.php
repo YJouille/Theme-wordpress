@@ -1,4 +1,5 @@
 <?php
+add_theme_support('title-tag');
 
 function mesMenusWordpress()
 {
@@ -14,7 +15,7 @@ add_action('init', 'mesMenusWordpress');
 
 
 
-function wpm_custom_post_type() {
+function wpm_custom_post_type_projets() {
 
 	// On rentre les différentes dénominations de notre custom post type qui seront affichées dans l'administration
 	$labels = array(
@@ -51,6 +52,8 @@ function wpm_custom_post_type() {
 		'hierarchical'        => false,
 		'public'              => true,
 		'has_archive'         => true,
+		'menu_position'	=> 3,
+		'menu_icon' => 'dashicons-portfolio',
 		'rewrite'			  => array( 'slug' => 'projets'),
 
 	);
@@ -60,4 +63,4 @@ function wpm_custom_post_type() {
 
 }
 
-add_action( 'init', 'wpm_custom_post_type', 0 );
+add_action( 'init', 'wpm_custom_post_type_projets', 0 );
