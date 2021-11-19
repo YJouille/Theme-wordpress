@@ -1,41 +1,66 @@
 <?php
-/* Template name: Gabarit Homepage */ 
-
-
-include('header.php');
+/* Template name: Gabarit Homepage */
+$image_header = get_field("image_header");
 ?>
+<style>
+    #header {
+        background-image: url("<?= $image_header ?>");
+    }
+</style>
 
-<header>
-<div class="container-fluid">
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://via.placeholder.com/150" class="d-block w-100" alt="...">
+
+<section id="header" class=" container-fluid">
+    <?php get_header(); ?>
+    <h1><?php echo get_field("titre_header") ?></h1>
+    <div>
+        <div class="scroll-down">
+            <p><?php echo get_field("scroll_down_text_header") ?> </p>
+            <div class="scroll-down-button"></div>
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="https://via.placeholder.com/151" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="https://via.placeholder.com/152" class="d-block w-100" alt="...">
-    </div>
-  </div>
-</div>
-</div>
-</header>
+</section>
+
+
+<!-- //////////////////////////SECTION 2 : W.A.A.A.///////////////////////// -->
+<section id="waaa" class="container-fluid d-flex">
+    <style>
+        /* style dans le html pour ajouter la fonctionnalité de changer la couleur du fond */
+        #waaa{
+            background-color: #d21242;
+        }
+
+    </style>
+
+        <div id="slogan-agence">
+            <h2><?php echo get_field("slogan_agence"); ?></h2>
+            <div id="lettrine-agence"> <?php echo get_field("lettrine_agence"); ?></div>
+        </div>
+
+        
+        <div class="blocs-agence "> 
+            <?php 
+//////////////////////////////////////////////////////////////////// boucle pour récupérer les blocs du WAAA
+            if(have_rows('bloc_agence')){
+                while (have_rows('bloc_agence')){ 
+                    the_row();
+                    $sub_value_picto = get_sub_field('picto_bloc_agence');
+                    $sub_value_title = get_sub_field('titre_bloc_agence');
+                    $sub_value_text = get_sub_field('texte_bloc_agence');
+                ?>
+                <div class="card" style="width: 18rem;">
+                    <img src="<?= $sub_value_picto ?>" class="card-img-top" alt="pictogramme">
+                    <div class="card-body">
+                    <h5 class="card-title"><?= $sub_value_title ?></h5>
+                    <p class="card-text"><?= $sub_value_text ?></p>
+                    </div>
+                </div>
+            <?php
+            }};             
+            ?>
+        </div>
+</section>
 
 
 
-<div class="container">
-    <h1><?php the_title(); ?></h1>
-    <div class="content">
-    <?php the_content(); ?>
-    </div>
-</div>
-
-
-
-<?php
-include('footer.php');
-
-?>
+   
 

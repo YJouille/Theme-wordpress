@@ -7,10 +7,128 @@ Description: Thème wordpress créé en groupe comme projet ACS avec: Yamina, Jo
 Version: 0.1
 */
 
+
+body{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 header{
     height:50vh; overflow:hidden;
 }
-nav{
-    color: blueviolet;
+.menu-menu-container ul{
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;    
+
+}
+.menu-menu-container a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.menu-menu-container a:hover{
+    color: blueviolet;
+    text-decoration: underline;
+}
+#header{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position:center;
+    background-size: cover;
+}
+#header h1{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-transform: uppercase;
+    font-size: 10rem;
+    color: white;
+    background: cover;
+}
+.scroll-down{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7vh;
+}
+
+.scroll-down-button{
+    color: white;
+    width: 70px;
+    height: 70px;
+    background-image: url("./media/keyboard_arrow_down_white_36dp.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: solid white 1px;
+    border-radius: 50%;
+    transition: .3s;
+    margin-bottom: 20px;
+}
+.scroll-down-button:hover{
+    width: 70px;
+    height: 70px;
+    background-image: url("./media/keyboard_arrow_down_white_36dp.svg");
+    background-repeat: no-repeat;
+    background-position-y: 75%;
+    cursor: pointer;
+}
+#waaa{
+display: flex;
+flex-direction: column;
+}
+#slogan-agence{
+   height: 50%;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   position: relative;
+   justify-content: center;
+}
+#slogan-agence h2{
+    text-transform: uppercase;
+    color: white;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#lettrine-agence{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 10rem;
+    font-weight: bold;
+    color: #da3d64;
+}
+.blocs-agence{
+    flex-wrap: wrap;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70vh;
+       
+}
+.blocs-agence img{
+    height: 10%;
+    width: 10%;
+}
+
+.card{
+    background: none;
+    height: 50%;
+    align-items: center;
+    text-align: center;
+    color: white;
+    border: none;
+}
+.card-title{
+    text-transform: uppercase;
+
 }
