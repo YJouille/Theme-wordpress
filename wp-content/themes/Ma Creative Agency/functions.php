@@ -4,7 +4,7 @@ function mesMenusWordpress()
 {
     register_nav_menus(
         array(
-            'header-menu' => __('Zone menu header'), 
+            'header-menu' => __('Zone menu header'),
         )
         );
 }
