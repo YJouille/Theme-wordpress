@@ -2,8 +2,8 @@
 
 <div class="main single">
 
-    <?php //if (have_posts()) : ?>
-        <?php //while (have_posts()) ?>
+    <?php if (have_posts()) : ?>
+        <?php while (have_posts()) ?>
 </div>
 ^^^^^^^^ ici c'est avec la fonction get_header ^^^^^^
 

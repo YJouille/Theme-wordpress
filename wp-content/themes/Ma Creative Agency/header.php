@@ -18,8 +18,8 @@ if ( has_nav_menu( 'header-menu' ) ) : ?>
 wp_nav_menu ( array (
 'theme_location' => 'header-menu' ,
 'container'      => 'nav',
-'menu_class'     => 'right no-bullets no-margin',
+'menu_class'     => 'right  no-bullets no-margin',
 ) ); ?>
 <?php endif;
 ?>
-    
+

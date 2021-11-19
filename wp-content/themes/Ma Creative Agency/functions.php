@@ -63,4 +63,5 @@ function wpm_custom_post_type_projets() {
 
 }
 
-add_action( 'init', 'wpm_custom_post_type_projets', 0 );
+add_action( 'init', 'wpm_custom_post_type', 0 );
+
