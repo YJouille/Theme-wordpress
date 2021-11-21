@@ -7,7 +7,9 @@ Description: Thème wordpress créé en groupe comme projet ACS avec: Yamina, Jo
 Version: 0.1
 */
 
-
+html{
+    background-color: rgb(90, 90, 90);
+}
 body{
     max-width: 1600px;
     margin-left: auto;
@@ -131,4 +133,39 @@ flex-direction: column;
 .card-title{
     text-transform: uppercase;
 
+}
+@media screen and (max-width: 1000px){
+    #header h1{
+        font-size: 10vw;
+    }
+}
+@media screen and (max-width: 600px){
+    #header h1{
+        font-size: 10vw;
+        max-width: 100vw;
+    }
+}
+
+
+
+
+/*************************************** FOOTER *********************************/
+
+.top-footer{
+    background-color: #d21242;
+    color: white;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.bottom-footer{
+    color: white;
+    height: 50px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }

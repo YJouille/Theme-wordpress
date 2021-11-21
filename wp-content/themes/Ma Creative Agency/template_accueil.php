@@ -8,14 +8,14 @@ $image_header = get_field("image_header");
     }
 </style>
 
-
+<!-- //////////////////////////SECTION 1 : HEADER & MENU///////////////////////// -->
 <section id="header" class=" container-fluid">
     <?php get_header(); ?>
     <h1><?php echo get_field("titre_header") ?></h1>
     <div>
-        <div class="scroll-down">
+        <div  class="scroll-down">
             <p><?php echo get_field("scroll_down_text_header") ?> </p>
-            <div class="scroll-down-button"></div>
+            <div onClick="window.scrollTo(0, 600);"  class="scroll-down-button"></div>
         </div>
     </div>
 </section>
@@ -60,7 +60,8 @@ $image_header = get_field("image_header");
         </div>
 </section>
 
-
+<?php //get_footer();
+include 'footer.php'; ?>
 
    
 
