@@ -48,7 +48,7 @@ function wpm_custom_post_type()
 		/* 
 		* Différentes options supplémentaires
 		*/
-		'show_in_rest' => true,
+		'show_in_rest'			=> true,
 		'hierarchical'        => false,
 		'public'              => true,
 		'has_archive'         => true,
@@ -71,15 +71,6 @@ add_action('init', 'wpm_custom_post_type', 0);
 function footer_widgets_init()
 {
 
-	// register_sidebar(array(
-
-	// 	'name' => 'widget footer',
-	// 	'id' => 'footer-widget-area',
-	// 	'before_widget' => '<div class="footer-widget-up-left">',
-	// 	'after_widget' => '</div>',
-	// 	'before_title' => '<h3 class="footer-title">',
-	// 	'after_title' => '</h3>',
-	// ));
 	register_sidebar(array(
 				'name' => __('Footer Column 1 1', 'creativeagency'),
 				'id' => 'footer_1',
