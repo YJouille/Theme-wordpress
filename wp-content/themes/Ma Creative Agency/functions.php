@@ -53,15 +53,15 @@ function wpm_custom_post_type()
 		'hierarchical'        => false,
 		'public'              => true,
 		'has_archive'         => true,
-		'menu_position'	=> 3,
-		'menu_icon' => 'dashicons-portfolio',
+		// 'menu_position'	=> 3,
+		// 'menu_icon' => 'dashicons-portfolio',
 		'rewrite'			  => array( 'slug' => 'projet'),
 
 	);
 
 	// On enregistre notre custom post type qu'on nomme ici "projets" et ses arguments
 	register_post_type( 'projet', $args );
-
+}
 
 
 
@@ -69,15 +69,7 @@ function wpm_custom_post_type()
 function footer_widgets_init()
 {
 
-	// register_sidebar(array(
 
-	// 	'name' => 'widget footer',
-	// 	'id' => 'footer-widget-area',
-	// 	'before_widget' => '<div class="footer-widget-up-left">',
-	// 	'after_widget' => '</div>',
-	// 	'before_title' => '<h3 class="footer-title">',
-	// 	'after_title' => '</h3>',
-	// ));
 	register_sidebar(array(
 				'name' => __('Footer Column 1 1', 'creativeagency'),
 				'id' => 'footer_1',

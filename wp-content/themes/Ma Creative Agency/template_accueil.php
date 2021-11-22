@@ -13,9 +13,9 @@ $image_header = get_field("image_header");
     <?php get_header(); ?>
     <h1><?php echo get_field("titre_header") ?></h1>
     <div>
-        <div  class="scroll-down">
+        <div class="scroll-down">
             <p><?php echo get_field("scroll_down_text_header") ?> </p>
-            <div onClick="window.scrollTo(0, 600);"  class="scroll-down-button"></div>
+            <div onClick="window.scrollTo(0, 600);" class="scroll-down-button"></div>
         </div>
     </div>
 </section>
@@ -25,42 +25,64 @@ $image_header = get_field("image_header");
 <section id="waaa" class="container-fluid d-flex">
     <style>
         /* style dans le html pour ajouter la fonctionnalité de changer la couleur du fond */
-        #waaa{
+        #waaa {
             background-color: #d21242;
         }
-
     </style>
 
-        <div id="slogan-agence">
-            <h2><?php echo get_field("slogan_agence"); ?></h2>
-            <div id="lettrine-agence"> <?php echo get_field("lettrine_agence"); ?></div>
-        </div>
+    <div id="slogan-agence">
+        <h2><?php echo get_field("slogan_agence"); ?></h2>
+        <div id="lettrine-agence"> <?php echo get_field("lettrine_agence"); ?></div>
+    </div>
 
-        
-        <div class="blocs-agence "> 
-            <?php 
-//////////////////////////////////////////////////////////////////// boucle pour récupérer les blocs du WAAA
-            if(have_rows('bloc_agence')){
-                while (have_rows('bloc_agence')){ 
-                    the_row();
-                    $sub_value_picto = get_sub_field('picto_bloc_agence');
-                    $sub_value_title = get_sub_field('titre_bloc_agence');
-                    $sub_value_text = get_sub_field('texte_bloc_agence');
-                ?>
+
+    <div class="blocs-agence ">
+        <?php
+        //////////////////////////////////////////////////////////////////// boucle pour récupérer les blocs du WAAA
+        if (have_rows('bloc_agence')) {
+            while (have_rows('bloc_agence')) {
+                the_row();
+                $sub_value_picto = get_sub_field('picto_bloc_agence');
+                $sub_value_title = get_sub_field('titre_bloc_agence');
+                $sub_value_text = get_sub_field('texte_bloc_agence');
+        ?>
                 <div class="card" style="width: 18rem;">
                     <img src="<?= $sub_value_picto ?>" class="card-img-top" alt="pictogramme">
                     <div class="card-body">
-                    <h5 class="card-title"><?= $sub_value_title ?></h5>
-                    <p class="card-text"><?= $sub_value_text ?></p>
+                        <h5 class="card-title"><?= $sub_value_title ?></h5>
+                        <p class="card-text"><?= $sub_value_text ?></p>
                     </div>
                 </div>
-            <?php
-            }};             
-            ?>
+        <?php
+            }
+        };
+        ?>
+    </div>
+</section>
+<!-- //////////////////////////SECTION 3 : Projets///////////////////////// -->
+<section id="projects" class="container-fluid d-flex">
+    <style>
+        /* style dans le html pour ajouter la fonctionnalité de changer la couleur du fond */
+        #projects {
+            background-color: #d21242;
+        }
+    </style>
+    <div class="blocs-projects row ">
+        <div class="col">
+        Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Donec id elit non mi porta gravida at eget metus.
         </div>
+        <div class="col">
+            <img src="">
+        </div>   
+    </div>
+
+
+    <?php
+    ///////////////////////////////////////////////////// boucle pour récupérer les 2 blocs projets
+
+    ?>
+    </div>
+</section>
 
 <?php //get_footer();
 include 'footer.php'; ?>
-
-   
-
