@@ -13,10 +13,28 @@
   </div>
 </div>
 
+<<<<<<< HEAD
+=======
+     <!-- ajout des widget  -->
+     <section class="top-footer">
+ <?php if ( is_active_sidebar( 'footer_1' ) ) : ?>
+ <div id="footer_1" class="footer-widget widget-area" role="complementary">
+ <?php dynamic_sidebar( 'footer_1' ); ?>
+ </div>
+ <?php endif; ?>
+>>>>>>> eb67b75ecb390c96ec730a78ee5f956a1d2fa453
+
+ <?php if ( is_active_sidebar( 'footer_2' ) ) : ?>
+ <div id="footer_2" class="footer-widget widget-area" role="complementary">
+ <?php dynamic_sidebar( 'footer_2' ); ?>
+ </div>
+ <?php endif; ?>
+     </section>
 
 
+     <section class="bottom-footer">
 
-
+<<<<<<< HEAD
 
 
 
@@ -40,6 +58,8 @@
 
      <section class="bottom-footer">
 
+=======
+>>>>>>> eb67b75ecb390c96ec730a78ee5f956a1d2fa453
  <?php if ( is_active_sidebar( 'footer_3' ) ) : ?>
  <div id="footer_3" class="footer-widget widget-area" role="complementary">
  <?php dynamic_sidebar( 'footer_3' ); ?>

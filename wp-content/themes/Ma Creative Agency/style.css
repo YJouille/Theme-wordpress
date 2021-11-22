@@ -154,6 +154,7 @@ flex-direction: column;
 .top-footer{
     background-color: #d21242;
     color: white;
+<<<<<<< HEAD
     min-height: 20vh;
     display: flex;
     flex-direction: row;
@@ -161,6 +162,13 @@ flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding: 10%;
+=======
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+>>>>>>> eb67b75ecb390c96ec730a78ee5f956a1d2fa453
 }
 .bottom-footer{
     color: white;
@@ -170,6 +178,7 @@ flex-direction: column;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+<<<<<<< HEAD
     flex-wrap: wrap;
 }
 #footer_1, #footer_2 {
@@ -188,4 +197,6 @@ flex-direction: column;
     max-width: 1;
     max-width: none!important; */
 
+=======
+>>>>>>> eb67b75ecb390c96ec730a78ee5f956a1d2fa453
 }
