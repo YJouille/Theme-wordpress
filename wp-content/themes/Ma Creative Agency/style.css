@@ -8,24 +8,22 @@ Version: 0.1
 */
 
 header{
-    height:50vh; overflow:hidden;
-}
-nav{
-    /* background-color: #292827; */
-    background-image: url(../media/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.menu{
-    border-bottom: solid 1px rgb(255, 0, 0);
-    position: relative;
     display: flex;
-    flex-wrap: wrap;
+    background-image: url(../media/background.png);
     align-items: center;
     justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: solid 1px rgb(255, 255, 255);
+}
+
+
+.menu{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     padding-top: .5rem;
-    padding-bottom: .5rem;  
+    padding-bottom: .5rem; 
 }
 
 .menu ul{
@@ -46,6 +44,7 @@ nav{
     font-family: 'Montserrat', sans-serif;
     display: block;
     position: relative;
+    margin: 0 0 0 1.5rem;
 }
 
 .menu a:hover{
@@ -67,17 +66,16 @@ nav{
 .menu a:hover::after,
 a:focus::after{
     opacity: 1;
-    transform: translate3d(0, 2.8em, 0);
+    transform: translate3d(0, 3.3em, 0);
 }
 
 .menu li.current_page_item a{
     color: #e6003d;
     font-weight: bold;
-    border-bottom: 0.2em solid #e6003d;
 }
 
 .logo{
-    margin: 0.5rem 4rem 0.5rem 9rem ;
+    margin: 1rem 4rem 1rem 9rem ;
 }
 
 #menu-item-34{
