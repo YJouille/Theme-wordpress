@@ -7,7 +7,9 @@ Description: Thème wordpress créé en groupe comme projet ACS avec: Yamina, Jo
 Version: 0.1
 */
 
-
+html{
+    background-color: rgb(90, 90, 90);
+}
 body{
     max-width: 1600px;
     margin-left: auto;
@@ -16,24 +18,95 @@ body{
 
 
 header{
-    height:50vh; overflow:hidden;
-}
-.menu-menu-container ul{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    list-style-type: none;
     display: flex;
-    justify-content: space-around;    
+    background-image: url(../media/background.png);
+    align-items: center;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: solid 1px rgb(255, 255, 255);
+}
 
+
+.menu{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: .5rem;
+    padding-bottom: .5rem; 
 }
-.menu-menu-container a{
-    color: rgb(255, 255, 255);
+
+.menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    color: white;
     text-decoration: none;
+    list-style: none;
 }
-.menu-menu-container a:hover{
-    color: blueviolet;
-    text-decoration: underline;
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    position: relative;
+    margin: 0 0 0 1.5rem;
 }
+
+.menu a:hover{
+    color: #e6003d;
+}
+
+.menu a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.2em;
+    background-color: #e6003d;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.menu a:hover::after,
+a:focus::after{
+    opacity: 1;
+    transform: translate3d(0, 3.3em, 0);
+}
+
+.menu li.current_page_item a{
+    color: #e6003d;
+    font-weight: bold;
+}
+
+.logo{
+    margin: 1rem 4rem 1rem 9rem ;
+}
+
+#menu-item-34{
+    margin: 0 0 0 4rem ;
+}
+
+#menu-item-37{
+    margin: 0 12rem 0 0 ;
+}
+
+#menu-item-33{
+    margin: 0 0 0 6rem ;
+}
+ 
+
+
+
+
+
+
+
 #header{
     height: 100vh;
     display: flex;
@@ -112,12 +185,12 @@ flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70vh;
+    min-height: 70vh;
        
 }
 .blocs-agence img{
     height: 10%;
-    width: 10%;
+    width: auto;
 }
 
 .card{
@@ -130,5 +203,60 @@ flex-direction: column;
 }
 .card-title{
     text-transform: uppercase;
+
+}
+@media screen and (max-width: 1000px){
+    #header h1{
+        font-size: 10vw;
+    }
+}
+@media screen and (max-width: 600px){
+    #header h1{
+        font-size: 10vw;
+        max-width: 100vw;
+    }
+}
+
+
+
+
+/*************************************** FOOTER *********************************/
+
+.top-footer{
+    background-color: #d21242;
+    color: white;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10%;
+}
+.bottom-footer{
+    color: white;
+    height: 50px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#footer_1, #footer_2 {
+    width: 50%;
+    min-width: 350px;
+    display: inline-flex;
+    padding: 40px;
+}
+
+
+.top-footer .footer-widget img{
+    border: black solid 1px;
+    /* width: 100%!important; */
+    /* width: auto; */
+    /* height: 66%!important;
+    max-width: 1;
+    max-width: none!important; */
 
 }
