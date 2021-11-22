@@ -7,7 +7,9 @@ Description: Thème wordpress créé en groupe comme projet ACS avec: Yamina, Jo
 Version: 0.1
 */
 
-
+html{
+    background-color: rgb(90, 90, 90);
+}
 body{
     max-width: 1600px;
     margin-left: auto;
@@ -112,12 +114,12 @@ flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70vh;
+    min-height: 70vh;
        
 }
 .blocs-agence img{
     height: 10%;
-    width: 10%;
+    width: auto;
 }
 
 .card{
@@ -130,5 +132,60 @@ flex-direction: column;
 }
 .card-title{
     text-transform: uppercase;
+
+}
+@media screen and (max-width: 1000px){
+    #header h1{
+        font-size: 10vw;
+    }
+}
+@media screen and (max-width: 600px){
+    #header h1{
+        font-size: 10vw;
+        max-width: 100vw;
+    }
+}
+
+
+
+
+/*************************************** FOOTER *********************************/
+
+.top-footer{
+    background-color: #d21242;
+    color: white;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10%;
+}
+.bottom-footer{
+    color: white;
+    height: 50px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#footer_1, #footer_2 {
+    width: 50%;
+    min-width: 350px;
+    display: inline-flex;
+    padding: 40px;
+}
+
+
+.top-footer .footer-widget img{
+    border: black solid 1px;
+    /* width: 100%!important; */
+    /* width: auto; */
+    /* height: 66%!important;
+    max-width: 1;
+    max-width: none!important; */
 
 }
