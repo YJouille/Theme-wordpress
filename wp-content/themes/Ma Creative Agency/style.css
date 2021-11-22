@@ -17,15 +17,6 @@ body{
 }
 
 
-header{
-    display: flex;
-    background-image: url(../media/background.png);
-    align-items: center;
-    justify-content: space-between;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-bottom: solid 1px rgb(255, 255, 255);
-}
 
 
 .menu{
@@ -102,10 +93,17 @@ a:focus::after{
  
 
 
+/*******************************************HEADER******************************/
 
 
-
-
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: solid 1px rgb(255, 255, 255);
+}
 
 #header{
     height: 100vh;
@@ -151,6 +149,11 @@ a:focus::after{
     background-position-y: 75%;
     cursor: pointer;
 }
+
+
+/***************************************************************WAAA******************/
+ 
+
 #waaa{
 display: flex;
 flex-direction: column;
@@ -252,11 +255,11 @@ flex-direction: column;
 
 
 .top-footer .footer-widget img{
-    border: black solid 1px;
+    /* border: black solid 1px; */
     /* width: 100%!important; */
     /* width: auto; */
-    /* height: 66%!important;
-    max-width: 1;
-    max-width: none!important; */
+    /* height: 75px!important; */
+    /* max-width: 1; */
+    /* width: 75px!important; */
 
 }
