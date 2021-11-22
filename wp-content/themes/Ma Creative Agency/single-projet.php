@@ -1,8 +1,8 @@
 <?php get_header() ?>
-<?php if(have_posts()) : while (have_posts()) : the_post(); ?>
-<h1><?php the_title() ?></h1>
-<p></p>
-<?php endwhile;
-endif; ?>
 
+<div class="container">
+    <h1><?php echo get_field("titre_projet"); ?></h1>
+    <p><?php echo get_field("contenu_projet"); ?></p>
+
+</div>
 <?php get_footer() ?>
