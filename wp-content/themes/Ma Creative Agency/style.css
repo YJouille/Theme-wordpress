@@ -74,6 +74,7 @@ a:focus::after{
 .menu li.current_page_item a{
     color: #e6003d;
     font-weight: bold;
+    /* border-bottom: 1px solid red; */
 }
 
 #menu-item-37{
@@ -247,7 +248,6 @@ header{
     background-position-y: 75%;
     cursor: pointer;
 }
-
 
 /***************************************************************WAAA******************/
  
@@ -576,7 +576,6 @@ flex-direction: column;
 
 
 /**************************************** CONTACT US ********************************/
-/* CSS Contact us */
 
 #titre{
     color: white;
