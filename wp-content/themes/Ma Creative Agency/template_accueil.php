@@ -6,11 +6,12 @@ $image_header = get_field("image_header");
     #header {
         background-image: url("<?= $image_header ?>");
     }
-</style>
+</style>    
+
 
 <!-- //////////////////////////SECTION 1 : HEADER & MENU///////////////////////// -->
 <section id="header" class=" container-fluid">
-    <?php get_header(); ?>
+  <?php get_header(); ?>
     <h1><?php echo get_field("titre_header") ?></h1>
     <div>
         <div class="scroll-down">
@@ -59,6 +60,102 @@ $image_header = get_field("image_header");
         ?>
     </div>
 </section>
+<!---------------------------------------------------------SECTION PROJETS--------------------------------------->
+<section>
+  <?php
+$args = array(
+        'post_type' => 'projets',  
+    );
+
+    $the_query = new WP_Query($args);
+    while ($the_query->have_posts()) : $the_query->the_post();
+
+    ?>
+    </div>
+
+        <div class="project">
+            <div class="project-content">
+                <h3><?= get_field('titre_projet') ?></h3>
+                <p><?= get_field('resume_projet') ?></p>
+            </div>
+
+            <div class="img-container">
+                <?php
+                // check if the repeater field has rows of data
+                if (have_rows('images_projet')) :
+
+                    // loop through the rows of data
+                    while (have_rows('images_projet')) : the_row();
+
+                        // display a sub field value
+                        ?>
+                        <img src="<?=the_sub_field('image_projet');?>" alt="Une image">
+
+                        <?php
+                         break; //Pour afficher une seule image
+                    endwhile;
+                else :
+                // no rows found
+                endif;
+                ?>               
+            </div>
+        </div>
+
+
+
+
+    <?php endwhile;
+    wp_reset_postdata(); ?>
+
+
+</section>
+
+<div id="slogan-blog">
+  <h2><?= get_field('titre_blog'); ?></h2>
+  <div id="lettrine-blog"><?= get_field('lettrine_blog'); ?></div>
+  <div id="accroche-blog"><?= get_field('accroche_blog'); ?></div>
+</div>
+
+<?php
+$posts = get_posts([
+  "posts_per_page" => 4,
+  "orderby" => "date",
+  "order" => "DESC",
+]);
+
+// echo '<pre>';
+// var_dump($posts);
+// echo '</pre>';
+?>
+<section>
+  <div class="container">
+    <div class="row">
+      <?php if ($posts) {
+        foreach ($posts as $post) {
+          $post_title = str_replace("-", " ", $post->post_name);
+          $post_guid = $post->guid;
+          $post_excerpt = $post->post_excerpt;
+      ?>
+          <div class="col-sm-3">
+            <div class="mt-5">
+              <?php the_post_thumbnail('card-blog', ['class' => 'card-img-top', 'alt' => '', 'style' => ' height:100%;']); ?>
+              <div class="mt-3">
+                <a class="article_name" href="<?= $post_guid; ?>">
+                  <h5 class="text-center"><?= $post_title; ?></h5>
+                </a>
+                <p class="article_excerpt text-center mt-3"><?= $post_excerpt; ?></p>
+              </div>
+            </div>
+          </div>
+        <?php }
+      } else { ?>
+        <h1>Pas d'articles</h1>
+      <?php } ?>
+    </div>
+  </div>
+</section>
+
+
 
 <?php //get_footer();
 include 'footer.php'; ?>

@@ -1,22 +1,21 @@
 <?php
-
 function mesMenusWordpress()
 {
     register_nav_menus(
         array(
             'header-menu' => __('Zone menu header'),
+            'header-menu-social' => __('Zone menu header social'),
         )
         );
+		add_theme_support('post-thumbnails');
+		add_image_size('card-blog', 300, 300, true);
 }
 
 add_action('init', 'mesMenusWordpress');
 
 
-
-
 function wpm_custom_post_type()
 {
-
 	// On rentre les différentes dénominations de notre custom post type qui seront affichées dans l'administration
 	$labels = array(
 		// Le nom au pluriel
