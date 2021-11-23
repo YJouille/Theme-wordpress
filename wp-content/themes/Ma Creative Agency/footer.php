@@ -1,11 +1,3 @@
-  <!-- ajout des widget  -->
-  <section class="top-footer">
-
-    <?php if (is_active_sidebar('footer_1')) : ?>
-      <div id="footer_1" class="footer-widget widget-area" role="complementary">
-        <?php dynamic_sidebar('footer_1'); ?>
-      </div>
-    <?php endif; ?>
 
     <?php if (is_active_sidebar('footer_2')) : ?>
       <div id="footer_2" class="footer-widget widget-area" role="complementary">

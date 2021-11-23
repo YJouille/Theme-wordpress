@@ -79,6 +79,7 @@ a:focus::after{
     margin: 1rem 4rem 1rem 9rem ;
 }
 
+
 #menu-item-34{
     margin: 0 0 0 4rem ;
 }
@@ -98,11 +99,13 @@ a:focus::after{
 
 header{
     display: flex;
+    
+    width: 100%;
     align-items: center;
     justify-content: space-between;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #2222225f;
     border-bottom: solid 1px rgb(255, 255, 255);
+    padding: 0;
 }
 
 #header{
@@ -220,6 +223,93 @@ flex-direction: column;
     }
 }
 
+/**********************************************section projets********************/
+#projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+}
+.project{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+}
+#projects h3{
+    text-transform: uppercase;
+    margin-top: 4vh;
+    margin-bottom: calc(5px + 6vh);
+}
+.project:nth-child(odd){
+    flex-direction: row-reverse;
+}
+.project-content{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding-left: 5vw;
+    width: 50%;
+    height: 100%;
+    background-color: #222222;
+    color: white;
+    padding-right: 5vw;
+    font-size: calc(0.8vw + 5px);
+}
+.project:nth-child(odd) .project-content{
+    padding-right: 10vw;
+    padding-left: 5vw;
+    background-color: #f3f3f3;
+    color: black;
+}
+.img-container{
+    width: 50%;
+    height: 60vh;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/**********************************************end section projets********************/
+
+
+
+/**********************************BLOG***************************************/
+
+#slogan-blog{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    }
+    #slogan-blog h2{
+    text-transform: uppercase;
+    color: #222222;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 20vh;
+    font-weight: 400;
+    }
+    
+    #lettrine-blog{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 14rem;
+    font-weight: bold;
+    color: #db4168;
+    }
+
+    #accroche-blog{
+        margin-top: 10vh;
+        font-size: 3.8vh;
+
+    }
 
 /**********************************************section projets********************/
 #projects{
@@ -351,3 +441,19 @@ flex-direction: column;
     /* width: 75px!important; */
 
 }
+
+
+
+
+/**************************************** 404 ********************************/
+
+#page-error{
+    background: url('https://image.noelshack.com/fichiers/2015/25/1434580572-url.jpg');
+    background-repeat: no-repeat;
+    /* background-size:cover; */
+    background-position: left bottom;
+    height: 500px;
+    }
+
+
+

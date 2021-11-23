@@ -1,23 +1,21 @@
 <?php
-// add_theme_support('title-tag');
-
 function mesMenusWordpress()
 {
     register_nav_menus(
         array(
             'header-menu' => __('Zone menu header'),
+            'header-menu-social' => __('Zone menu header social'),
         )
         );
+		add_theme_support('post-thumbnails');
+		add_image_size('card-blog', 300, 300, true);
 }
 
 add_action('init', 'mesMenusWordpress');
 
 
-
-
 function wpm_custom_post_type()
 {
-
 	// On rentre les différentes dénominations de notre custom post type qui seront affichées dans l'administration
 	$labels = array(
 		// Le nom au pluriel
@@ -49,7 +47,7 @@ function wpm_custom_post_type()
 		/* 
 		* Différentes options supplémentaires
 		*/
-		'show_in_rest' => true,
+		'show_in_rest'			=> true,
 		'hierarchical'        => false,
 		'public'              => true,
 		'has_archive'         => true,
@@ -68,7 +66,6 @@ add_action('init', 'wpm_custom_post_type', 0);
 ///////////////////////////////////////////////////////zone de widget/////////////////////////////////////
 function footer_widgets_init()
 {
-
 
 	register_sidebar(array(
 				'name' => __('Footer Column 1 1', 'creativeagency'),

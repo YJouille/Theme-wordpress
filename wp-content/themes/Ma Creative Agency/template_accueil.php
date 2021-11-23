@@ -6,11 +6,12 @@ $image_header = get_field("image_header");
     #header {
         background-image: url("<?= $image_header ?>");
     }
-</style>
+</style>    
+
 
 <!-- //////////////////////////SECTION 1 : HEADER & MENU///////////////////////// -->
 <section id="header" class=" container-fluid">
-    <?php get_header(); ?>
+  <?php get_header(); ?>
     <h1><?php echo get_field("titre_header") ?></h1>
     <div>
         <div class="scroll-down">
