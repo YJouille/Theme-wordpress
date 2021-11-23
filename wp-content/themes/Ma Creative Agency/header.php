@@ -19,16 +19,16 @@
 
 <body>
     <header>
-        <div id="logo" class="logo"><a href="<?php echo get_site_url(); ?>"><img
-                    src="<?php echo get_site_icon_url(); ?> " width="79" alt="logo"></a></div>
-        <?php
+            <div id="logo" class="logo"><a href="<?php echo get_site_url(); ?>"><img
+                        src="<?php echo get_site_icon_url(); ?> " width="79" alt="logo"></a></div>
+            <?php
 if ( has_nav_menu( 'header-menu' ) ) : ?>
-        <?php
+            <?php
 wp_nav_menu ( array (
 'theme_location' => 'header-menu' ,
 'container'      => 'nav',
 'menu_class'     => 'menu',
 ) ); ?>
-        <?php endif;
-?>
+            <?php endif;
+?> 
     </header>
