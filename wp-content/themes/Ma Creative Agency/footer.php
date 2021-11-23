@@ -33,7 +33,6 @@
     <!-- fin nouvelle widget area -->
 
 
-
   </section>
   </body>
 

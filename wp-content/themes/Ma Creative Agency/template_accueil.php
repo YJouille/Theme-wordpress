@@ -70,7 +70,7 @@ $image_header = get_field("image_header");
     <?php
     ///////////////////////////////////////////////////// boucle pour récupérer les 2 blocs projets
     $args = array(
-        'post_type' => 'projets',  
+        'post_type' => 'projets',
     );
 
     $the_query = new WP_Query($args);
@@ -93,16 +93,17 @@ $image_header = get_field("image_header");
                     while (have_rows('images_projet')) : the_row();
 
                         // display a sub field value
-                        ?>
-                        <img src="<?=the_sub_field('image_projet');?>" alt="Une image">
-
-                        <?php
-                         break; //Pour afficher une seule image
+                ?>
+                        <a href="<?= get_post_permalink() ?>" target="_blank">
+                            <img src="<?= the_sub_field('image_projet'); ?>" alt="image projet">
+                        </a>
+                <?php
+                        break; //Pour afficher une seule image
                     endwhile;
                 else :
                 // no rows found
                 endif;
-                ?>               
+                ?>
             </div>
         </div>
 
