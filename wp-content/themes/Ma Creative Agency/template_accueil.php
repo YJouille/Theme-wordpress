@@ -10,13 +10,14 @@ $image_header = get_field("image_header");
 
 
 <!-- //////////////////////////SECTION 1 : HEADER & MENU///////////////////////// -->
-<section id="header" class=" container-fluid">
+<section id="header">
   <?php get_header(); ?>
+
     <h1><?php echo get_field("titre_header") ?></h1>
     <div>
-        <div class="scroll-down">
+        <div id="scroll-down">
             <p><?php echo get_field("scroll_down_text_header") ?> </p>
-            <div onClick="window.scrollTo(0, 600);" class="scroll-down-button"></div>
+            <div class="scroll-down-button"></div>
         </div>
     </div>
 </section>
@@ -60,18 +61,24 @@ $image_header = get_field("image_header");
         ?>
     </div>
 </section>
-<!---------------------------------------------------------SECTION PROJETS--------------------------------------->
-<section>
-  <?php
-$args = array(
-        'post_type' => 'projets',  
+<!-- //////////////////////////SECTION 3 : Projets///////////////////////// -->
+<section id="projects" class="container-fluid d-flex">
+    <style>
+        /* style dans le html pour ajouter la fonctionnalité de changer la couleur du fond */
+        #projects {
+            background-color: #d21242;
+        }
+    </style>
+    <?php
+    ///////////////////////////////////////////////////// boucle pour récupérer les 2 blocs projets
+    $args = array(
+        'post_type' => 'projets',
     );
 
     $the_query = new WP_Query($args);
     while ($the_query->have_posts()) : $the_query->the_post();
 
     ?>
-    </div>
 
         <div class="project">
             <div class="project-content">
@@ -88,16 +95,17 @@ $args = array(
                     while (have_rows('images_projet')) : the_row();
 
                         // display a sub field value
-                        ?>
-                        <img src="<?=the_sub_field('image_projet');?>" alt="Une image">
-
-                        <?php
-                         break; //Pour afficher une seule image
+                ?>
+                        <a href="<?= get_post_permalink() ?>" target="_blank">
+                            <img src="<?= the_sub_field('image_projet'); ?>" alt="image projet">
+                        </a>
+                <?php
+                        break; //Pour afficher une seule image
                     endwhile;
                 else :
                 // no rows found
                 endif;
-                ?>               
+                ?>
             </div>
         </div>
 
@@ -106,7 +114,6 @@ $args = array(
 
     <?php endwhile;
     wp_reset_postdata(); ?>
-
 
 </section>
 
