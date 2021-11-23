@@ -55,15 +55,15 @@ function wpm_custom_post_type()
 		'has_archive'         => true,
 		// 'menu_position'	=> 3,
 		// 'menu_icon' => 'dashicons-portfolio',
-		'rewrite'			  => array( 'slug' => 'projet'),
+		'rewrite'			  => array( 'slug' => 'projets'),
 
 	);
 
 	// On enregistre notre custom post type qu'on nomme ici "projets" et ses arguments
-	register_post_type( 'projet', $args );
+	register_post_type( 'projets', $args );
 }
 
-
+add_action('init', 'wpm_custom_post_type', 0);
 
 ///////////////////////////////////////////////////////zone de widget/////////////////////////////////////
 function footer_widgets_init()

@@ -218,7 +218,58 @@ flex-direction: column;
 }
 
 
+/**********************************************section projets********************/
+#projects{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+}
+.project{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+}
+#projects h3{
+    text-transform: uppercase;
+    margin-top: 4vh;
+    margin-bottom: calc(5px + 6vh);
+}
+.project:nth-child(odd){
+    flex-direction: row-reverse;
+}
+.project-content{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding-left: 5vw;
+    width: 50%;
+    height: 100%;
+    background-color: #222222;
+    color: white;
+    padding-right: 5vw;
+    font-size: calc(0.8vw + 5px);
+}
+.project:nth-child(odd) .project-content{
+    padding-right: 10vw;
+    padding-left: 5vw;
+    background-color: #f3f3f3;
+    color: black;
+}
+.img-container{
+    width: 50%;
+    height: 60vh;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+/**********************************************end section projets********************/
 
 /*************************************** FOOTER *********************************/
 

@@ -67,22 +67,52 @@ $image_header = get_field("image_header");
             background-color: #d21242;
         }
     </style>
-    <div class="blocs-projects row ">
-        <div class="col">
-        Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Donec id elit non mi porta gravida at eget metus.
-        </div>
-        <div class="col">
-            <img src="">
-        </div>   
-    </div>
-
-
     <?php
     ///////////////////////////////////////////////////// boucle pour récupérer les 2 blocs projets
+    $args = array(
+        'post_type' => 'projets',  
+    );
+
+    $the_query = new WP_Query($args);
+    while ($the_query->have_posts()) : $the_query->the_post();
 
     ?>
-    </div>
+
+        <div class="project">
+            <div class="project-content">
+                <h3><?= get_field('titre_projet') ?></h3>
+                <p><?= get_field('resume_projet') ?></p>
+            </div>
+
+            <div class="img-container">
+                <?php
+                // check if the repeater field has rows of data
+                if (have_rows('images_projet')) :
+
+                    // loop through the rows of data
+                    while (have_rows('images_projet')) : the_row();
+
+                        // display a sub field value
+                        ?>
+                        <img src="<?=the_sub_field('image_projet');?>" alt="Une image">
+
+                        <?php
+                         break; //Pour afficher une seule image
+                    endwhile;
+                else :
+                // no rows found
+                endif;
+                ?>               
+            </div>
+        </div>
+
+
+
+
+    <?php endwhile;
+    wp_reset_postdata(); ?>
+
 </section>
 
-<?php //get_footer();
+<?php
 include 'footer.php'; ?>
