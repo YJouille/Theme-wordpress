@@ -76,21 +76,10 @@ a:focus::after{
     font-weight: bold;
 }
 
-/* .logo{
-    margin: 1rem 4rem 1rem 9rem ;
-} */
-
-
-
-
 #menu-item-37{
     margin: 0 5vw 0 0 ;
 }
 
-/* #menu-item-33{
-    margin: 0 0 0 6rem ;
-} */
- 
 /***********************MENU RESPONSIVE*****************************************/
 
 /*================================*/
@@ -162,6 +151,10 @@ a:focus::after{
 	@-webkit-keyframes slideLeft {
 		from {left:0%;}
 		to {left:-50%;}
+    }
+    #logo{
+       
+        padding-bottom: 25px;
     }
     #menu-item-34,
     #menu-item-35,
@@ -508,8 +501,103 @@ flex-direction: column;
     /* height: 75px!important; */
     /* max-width: 1; */
     /* width: 75px!important; */
-
 }
+
+
+
+
+/**************************************** CONTACT US ********************************/
+/* CSS Contact us */
+
+#titre{
+    color: white;
+    background-color: #e6003d;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.contact{
+    /* background: #e6003d; */
+    background-image: url(../media/writingletter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem;
+}
+
+.contact-form{
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    font-family:  'Montserrat', sans-serif; 
+    background: #F9F9F9;
+    padding: 25px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="url"],
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px
+}
+
+.contact-form input[type="text"]:hover,
+.contact-form input[type="email"]:hover,
+.contact-form input[type="tel"]:hover,
+.contact-form input[type="url"]:hover,
+.contact-form textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa
+}
+
+.contact-form textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none
+}
+
+.contact-form input[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #e6003d;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px
+}
+
+.contact-form input[type="submit"]:hover {
+    background: #f53f6f;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out
+}
+
+.contact-form input[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5)
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 0;
+    border: 1px solid #aaa
+}
+
+/* MAP OpenStreetMap */
+
+#wpgmza_map{
+    border: solid 3px #e6003d;
+}
+
 
 
 

@@ -2,8 +2,8 @@
 ////////////////bouton de scroll header //////////////////
 let scrollbtn = document.getElementById('scroll-down');
 if (scrollbtn != null){
-scrollbtn.addEventListener("click", function(){window.scrollTo(0, 600)})};
-;
+scrollbtn.addEventListener("click", function(){window.scrollTo(0, 600);});}
+
 
 ////////////////////////menu burger responsive ///////////////////////////
 // Récupération des blocs
@@ -12,16 +12,16 @@ var burgerMenu = document.querySelector("#menu-burger");
 // var burgerMenu = document.getElementById('menu-burger');
 
 
+//////////////////A TESTER /////////////////
+// function disableScrolling(){
+//     var x=window.scrollX;
+//     var y=window.scrollY;
+//     window.onscroll=function(){window.scrollTo(x, y);};
+// }
 
-function disableScrolling(){
-    var x=window.scrollX;
-    var y=window.scrollY;
-    window.onscroll=function(){window.scrollTo(x, y);};
-}
-
-function enableScrolling(){
-    window.onscroll=function(){};
-}
+// function enableScrolling(){
+//     window.onscroll=function(){};
+// }
 
 
 
@@ -50,7 +50,7 @@ burgerMenu.addEventListener(clickedEvent, function(evt) {
 	if(!this.getAttribute("class")) {
 		this.setAttribute("class", "clicked");
 	} else {
-		this.removeAttribute("class");
+		this.removeAttribute("class");        
 	}
 	// Variante avec x.classList (ou DOMTokenList), pas 100% compatible avant IE 11...
 	// burgerMenu.classList.toggle("clicked");
