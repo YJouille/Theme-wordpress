@@ -62,6 +62,16 @@ function wpm_custom_post_type() {
 
 add_action( 'init', 'wpm_custom_post_type', 0 );
 
+// function footer_widgets_init() {
 
+// 	register_sidebar(array(
+// 	'name' => __('contact_map', 'creativeagency'),
+// 	'id' => 'map',
+// 	'before_widget' => '<div class="contact-map">',
+// 	'after_widget' => '</div>',
+// 	'before_title' => '<h3>',
+// 	'after_title' => '</h3>',
+// 	));
+// }
 
-
+// add_action( 'init', 'footer_widgets_init');

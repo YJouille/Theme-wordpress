@@ -72,7 +72,10 @@ a:focus::after{
 .menu li.current_page_item a{
     color: #e6003d;
     font-weight: bold;
+    /* border-bottom: 1px solid red; */
 }
+
+
 
 .logo{
     margin: 1rem 4rem 1rem 9rem ;
@@ -92,19 +95,30 @@ a:focus::after{
 
 /* CSS Contact us */
 
-.contact
+#titre{
+    color: white;
+    background-color: #e6003d;
+    margin: 0 auto;
+    padding: 15px;
+}
 
-#titre{margin: 2rem;}
+.contact{
+    /* background: #e6003d; */
+    background-image: url(../media/writingletter.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem;
+}
 
 .contact-form{
     max-width: 400px;
     width: 100%;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     position: relative;
     font-family:  'Montserrat', sans-serif; 
     background: #F9F9F9;
     padding: 25px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .contact-form input[type="text"],
@@ -164,6 +178,11 @@ a:focus::after{
     border: 1px solid #aaa
 }
 
+/* MAP OpenStreetMap */
+
+#wpgmza_map{
+    border: solid 3px #e6003d;
+}
 
 
 
