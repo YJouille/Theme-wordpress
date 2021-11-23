@@ -273,6 +273,43 @@ flex-direction: column;
 }
 
 /**********************************************end section projets********************/
+/**********************************************Single project*************************/
+
+.section {
+    padding: 120px 0px;
+}
+.pb-0, .py-0 {
+    padding-bottom: 0!important;
+}
+.page-title h1 {
+    position: relative;
+    padding-bottom: 30px;
+    font-size: 45px;
+    /* font-family: ; */
+}
+.page-title h1:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0px;
+    width: 50px;
+    height: 3px;
+    margin-left: -25px;
+    background: #e6003d;
+}
+.project-single p{
+    color: #818385;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.info a{
+    margin-right: 10px;
+    color: #000;
+}
+.info a:hover{
+    color: #e6003d ;
+}
+/********************************************End ingle project************************/
 
 /*************************************** FOOTER *********************************/
 
