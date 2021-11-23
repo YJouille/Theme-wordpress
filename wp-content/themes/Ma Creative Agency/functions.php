@@ -1,4 +1,5 @@
 <?php
+// add_theme_support('title-tag');
 
 function mesMenusWordpress()
 {
@@ -52,34 +53,23 @@ function wpm_custom_post_type()
 		'hierarchical'        => false,
 		'public'              => true,
 		'has_archive'         => true,
-		'rewrite'			  => array('slug' => 'projets'),
+		// 'menu_position'	=> 3,
+		// 'menu_icon' => 'dashicons-portfolio',
+		'rewrite'			  => array( 'slug' => 'projets'),
 
 	);
 
 	// On enregistre notre custom post type qu'on nomme ici "projets" et ses arguments
-	register_post_type('projets', $args);
+	register_post_type( 'projets', $args );
 }
 
 add_action('init', 'wpm_custom_post_type', 0);
-
-
-
-
-
 
 ///////////////////////////////////////////////////////zone de widget/////////////////////////////////////
 function footer_widgets_init()
 {
 
-	// register_sidebar(array(
 
-	// 	'name' => 'widget footer',
-	// 	'id' => 'footer-widget-area',
-	// 	'before_widget' => '<div class="footer-widget-up-left">',
-	// 	'after_widget' => '</div>',
-	// 	'before_title' => '<h3 class="footer-title">',
-	// 	'after_title' => '</h3>',
-	// ));
 	register_sidebar(array(
 				'name' => __('Footer Column 1 1', 'creativeagency'),
 				'id' => 'footer_1',
