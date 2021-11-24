@@ -99,14 +99,14 @@ function footer_widgets_init()
 				'before_title' => '<h3>',
 				'after_title' => '</h3>',
 	));
-// 	register_sidebar(array(
-	// 	'name' => __('contact_map', 'creativeagency'),
-	// 	'id' => 'map',
-	// 	'before_widget' => '<div class="contact-map">',
-	// 	'after_widget' => '</div>',
-	// 	'before_title' => '<h3>',
-	// 	'after_title' => '</h3>',
-// 	));
+	register_sidebar(array(
+		'name' => __('contact_map', 'creativeagency'),
+		'id' => 'map',
+		'before_widget' => '<div class="contact-map">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
 }
 
 

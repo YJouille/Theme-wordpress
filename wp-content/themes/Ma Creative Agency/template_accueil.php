@@ -108,14 +108,8 @@ $image_header = get_field("image_header");
                 ?>
             </div>
         </div>
-
-
-
-
     <?php endwhile;
     wp_reset_postdata(); ?>
-
 </section>
-
 <?php
 include 'footer.php'; ?>
