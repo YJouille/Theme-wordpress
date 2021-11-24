@@ -571,7 +571,18 @@ flex-direction: column;
 /* page d'un article */
 
 #Page_article{
-    background: #db4168;
+    background: #8b8b8b
+}
+#Page_article .container{
+    background: #222222
+}
+#Page_article p{
+    color: #ffffff
+}
+#Page_article a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .comments__none{
@@ -583,11 +594,7 @@ flex-direction: column;
     display: flex;
     justify-content: end;
 }
-#Page_article a{
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-}
+
 
 
 
