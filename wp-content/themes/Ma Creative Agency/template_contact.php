@@ -14,8 +14,6 @@ include('header.php');
 <?php echo do_shortcode('[ultimate_maps id="1"]')?>
 </div>
 
-
-
 <?php
 include('footer.php');
 ?>
