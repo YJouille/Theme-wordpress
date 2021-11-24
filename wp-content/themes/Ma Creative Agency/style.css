@@ -6,7 +6,56 @@ Author URI: https://www.accesscodeschool.fr/
 Description: Thème wordpress créé en groupe comme projet ACS avec: Yamina, Joselito, Marley et Lucas.
 Version: 0.1
 */
+<<<<<<< HEAD
 /*************************************GENERAL************************************************/
+=======
+
+
+/**************************************** Fonts **********************************************/
+@font-face {
+    font-family: Roboto;
+    src: url('fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: RobotoBlack;
+    src: url('fonts/roboto-black-webfont.woff2') format('woff2'),
+         url('fonts/roboto-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: RobotoBold;
+    src: url('fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: GothamMedium;
+    src: url('fonts/gothammedium-webfont.woff2') format('woff2'),
+         url('fonts/gothammedium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: GothamBold;
+    src: url('fonts/gothambold-webfont.woff2') format('woff2'),
+         url('fonts/gothambold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: GothamBook;
+    src: url('fonts/gothambook-webfont.woff2') format('woff2'),
+         url('fonts/gothambook-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+>>>>>>> 25357288640ebe242ea47d57c481254d2742dfb4
 html{
     background-color: rgb(90, 90, 90);
 }
@@ -14,12 +63,27 @@ body{
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 25357288640ebe242ea47d57c481254d2742dfb4
 }
 
+<<<<<<< HEAD
 #logo{
     padding-top: 12px;
     padding-bottom: 12px;
+=======
+header{
+    display: flex;
+    background-image: url(../media/background.png);
+    align-items: center;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: solid 1px rgb(255, 255, 255);
+>>>>>>> yamina
 }
 /*************************************MENU DESKTOP************************************************/
 
@@ -77,6 +141,7 @@ a:focus::after{
 .menu li.current_page_item a{
     color: #e6003d;
     font-weight: bold;
+    /* border-bottom: 1px solid red; */
 }
 
 #menu-item-37{
@@ -299,7 +364,6 @@ header{
     cursor: pointer;
 }
 
-
 /***************************************************************WAAA******************/
  
 
@@ -369,6 +433,141 @@ flex-direction: column;
     }
 }
 
+
+/**********************************************section projets********************/
+
+.project{
+    height: 100%;
+    margin-right: -1px;
+}
+#projects h3{
+    text-transform: uppercase;
+    margin-top: 4vh;
+    margin-bottom: calc(5px + 6vh);
+    font-family: GothamMedium;
+}
+.project:nth-child(even){
+    flex-direction: row-reverse;
+}
+.project-content{
+    padding-left: 5vw;
+    background-color: #222222;
+    color: white;
+    padding-right: 5vw;
+    font-family: GothamBook;
+    font-size: calc(0.8vw + 2px);
+}
+.project:nth-child(even) .project-content{
+    padding-right: 10vw;
+    padding-left: 5vw;
+    background-color: #f3f3f3;
+    color: black;
+}
+.img-container{
+    
+    height: fit-content;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 600px){
+    .img-container{
+        flex-direction: column-reverse;
+    }
+
+    .project-content{
+        padding-left: 5vw;
+        height: 100%;
+        /* background-color: #222222;
+        color: white; */
+        padding-right: 5vw;
+        font-family: GothamBook;
+        font-size: calc(0.8vw + 8px);
+    }
+}
+
+
+/**********************************************end section projets********************/
+/**********************************************Single project*************************/
+
+.section {
+    padding: 120px 0px;
+}
+.pb-0, .py-0 {
+    padding-bottom: 0!important;
+}
+.page-title h1 {
+    position: relative;
+    padding-bottom: 30px;
+    font-size: 45px;
+    font-family: GothamMedium;
+}
+.page-title h1:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0px;
+    width: 50px;
+    height: 3px;
+    margin-left: -25px;
+    background: #e6003d;
+}
+.project-single p{
+    color: #818385;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: GothamBook;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    height: 45px;
+    width: 45px;
+    background-color:black;
+    border-radius: 15px;
+}
+
+.info a{
+    margin-right: 10px;
+    color: #000;
+}
+.info a:hover{
+    color: #e6003d ;
+}
+/********************************************End ingle project************************/
+
+/**********************************BLOG***************************************/
+
+#slogan-blog{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    }
+    #slogan-blog h2{
+    text-transform: uppercase;
+    color: #222222;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 20vh;
+    font-weight: 400;
+    }
+    
+    #lettrine-blog{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 14rem;
+    font-weight: bold;
+    color: #db4168;
+    }
+
+    #accroche-blog{
+        margin-top: 10vh;
+        font-size: 3.8vh;
+
+    }
 
 /**********************************************section projets********************/
 #projects{
@@ -460,60 +659,6 @@ flex-direction: column;
 }
 /********************************************End ingle project************************/
 
-/**********************************BLOG***************************************/
-
-#slogan-blog{
-    height: 50%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    justify-content: center;
-    }
-    #slogan-blog h2{
-    text-transform: uppercase;
-    color: #222222;
-    justify-content: center;
-    z-index: 1;
-    margin-top: 20vh;
-    font-weight: 400;
-    }
-    
-    #lettrine-blog{
-    position: absolute;
-    text-transform: uppercase;
-    font-size: 14rem;
-    font-weight: bold;
-    color: #db4168;
-    }
-
-    #accroche-blog{
-        margin-top: 10vh;
-        font-size: 3.8vh;
-
-    }
-
-.article_name{
-    text-decoration: none;
-    text-transform: uppercase;
-    
-}
-.article_name h5{
-    font-size: 2.2vh;
-    color: #db4168;
-    transform: translateY(0px);
-    transition: transform 0.5s;
-}
-.article_name h5:hover{
-    color: #db4168;
-    transform: translateY(-4px);
-    transition: transform 0.5s;
-}
-.card-img-top{
-    height: auto!important;
-}
-
-
 /*************************************** FOOTER *********************************/
 
 .top-footer{
@@ -557,7 +702,6 @@ flex-direction: column;
 
 
 /**************************************** CONTACT US ********************************/
-/* CSS Contact us */
 
 #titre{
     color: white;

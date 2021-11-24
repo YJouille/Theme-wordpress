@@ -5,3 +5,4 @@
     <p><?php the_content() ?></p>
 </div>
 
+<?php get_footer(); ?>

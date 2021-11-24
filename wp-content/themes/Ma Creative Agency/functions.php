@@ -51,20 +51,17 @@ function wpm_custom_post_type()
 		'hierarchical'        => false,
 		'public'              => true,
 		'has_archive'         => true,
-		'rewrite'			  => array('slug' => 'projets'),
+		// 'menu_position'	=> 3,
+		// 'menu_icon' => 'dashicons-portfolio',
+		'rewrite'			  => array( 'slug' => 'projets'),
 
 	);
 
 	// On enregistre notre custom post type qu'on nomme ici "projets" et ses arguments
-	register_post_type('projets', $args);
+	register_post_type( 'projets', $args );
 }
 
 add_action('init', 'wpm_custom_post_type', 0);
-
-
-
-
-
 
 ///////////////////////////////////////////////////////zone de widget/////////////////////////////////////
 function footer_widgets_init()
@@ -118,14 +115,14 @@ function footer_widgets_init()
 				'before_title' => '<h3>',
 				'after_title' => '</h3>',
 	));
-// 	register_sidebar(array(
-	// 	'name' => __('contact_map', 'creativeagency'),
-	// 	'id' => 'map',
-	// 	'before_widget' => '<div class="contact-map">',
-	// 	'after_widget' => '</div>',
-	// 	'before_title' => '<h3>',
-	// 	'after_title' => '</h3>',
-// 	));
+	register_sidebar(array(
+		'name' => __('contact_map', 'creativeagency'),
+		'id' => 'map',
+		'before_widget' => '<div class="contact-map">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
 }
 
 

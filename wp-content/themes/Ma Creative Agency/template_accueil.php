@@ -62,31 +62,25 @@ $image_header = get_field("image_header");
     </div>
 </section>
 <!-- //////////////////////////SECTION 3 : Projets///////////////////////// -->
-<section id="projects" class="container-fluid d-flex">
-    <style>
-        /* style dans le html pour ajouter la fonctionnalité de changer la couleur du fond */
-        #projects {
-            background-color: #d21242;
-        }
-    </style>
+<section id="projects" class="container-fluid d-flex flex-column justify-content-start g-0 m-0">
+     
     <?php
     ///////////////////////////////////////////////////// boucle pour récupérer les 2 blocs projets
     $args = array(
         'post_type' => 'projets',
+        'posts_per_page' => 2,
     );
 
     $the_query = new WP_Query($args);
     while ($the_query->have_posts()) : $the_query->the_post();
-
     ?>
-
-        <div class="project">
-            <div class="project-content">
+        <div class="project d-flex justify-content-center row g-0">
+            <div class="project-content d-flex flex-column align-items-left justify-content-center col-lg-6   m-0 g-0">
                 <h3><?= get_field('titre_projet') ?></h3>
                 <p><?= get_field('resume_projet') ?></p>
             </div>
 
-            <div class="img-container">
+            <div class="img-container col-lg-6   m-0 g-0">
                 <?php
                 // check if the repeater field has rows of data
                 if (have_rows('images_projet')) :
@@ -108,61 +102,8 @@ $image_header = get_field("image_header");
                 ?>
             </div>
         </div>
-
-
-
-
     <?php endwhile;
     wp_reset_postdata(); ?>
-
 </section>
-
-<div id="slogan-blog">
-  <h2><?= get_field('titre_blog'); ?></h2>
-  <div id="lettrine-blog"><?= get_field('lettrine_blog'); ?></div>
-  <div id="accroche-blog"><?= get_field('accroche_blog'); ?></div>
-</div>
-
 <?php
-$posts = get_posts([
-  "posts_per_page" => 4,
-  "orderby" => "date",
-  "order" => "DESC",
-]);
-
-// echo '<pre>';
-// var_dump($posts);
-// echo '</pre>';
-?>
-<section>
-  <div class="container">
-    <div class="row">
-      <?php if ($posts) {
-        foreach ($posts as $post) {
-          $post_title = str_replace("-", " ", $post->post_name);
-          $post_guid = $post->guid;
-          $post_excerpt = $post->post_excerpt;
-      ?>
-          <div class="col-sm-3">
-            <div class="mt-5">
-              <?php the_post_thumbnail('card-blog', ['class' => 'card-img-top', 'alt' => '', 'style' => ' height:100%;']); ?>
-              <div class="mt-3">
-                <a class="article_name" href="<?= $post_guid; ?>">
-                  <h5 class="text-center"><?= $post_title; ?></h5>
-                </a>
-                <p class="article_excerpt text-center mt-3"><?= $post_excerpt; ?></p>
-              </div>
-            </div>
-          </div>
-        <?php }
-      } else { ?>
-        <h1>Pas d'articles</h1>
-      <?php } ?>
-    </div>
-  </div>
-</section>
-
-
-
-<?php //get_footer();
 include 'footer.php'; ?>
