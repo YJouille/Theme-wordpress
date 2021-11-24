@@ -1,27 +1,21 @@
-<?php get_header(); ?>
+<?php get_header() ?>
+<section id="Page_article">
+    <div class="container ">
+        <div class="row justify-content-center my-5">
+            <?php if (have_posts()) :
 
-<div class="main single">
-
-    <?php //if (have_posts()) : ?>
-        <?php //while (have_posts()) ?>
-</div>
-^^^^^^^^ ici c'est avec la fonction get_header ^^^^^^
-
-
-<?php include ('header.php') ?>
-
-<div class="container">
-    <h1><?php the_title() ?></h1>
-    <p><?php the_content() ?></p>
-</div>
-<div class="extra">
-    <ul>
-        <li><?php echo get_field('prix') ?></li>
-        <li><?php echo get_field('varietes') ?></li>
-    </ul>
-</div>
-
-
-
-
-<?php include ('footer.php') ?>
+                while (have_posts()) : the_post(); ?>
+                    <div class="col-12">
+                        <h1 class="text-center mb-5"><?php the_title() ?></h1>
+                        <img src="<?php the_post_thumbnail_url(); ?>" alt="" style="width: 100%; height: 300px; object-fit: cover;">
+                        <p class="mt-5"><?php the_content() ?></p>
+                    </div>
+            <?php endwhile;
+            endif; ?>
+            <?php
+            comments_template(); // Par ici les commentaires 
+            ?>
+        </div>
+    </div>
+</section>
+<?php get_footer() ?>

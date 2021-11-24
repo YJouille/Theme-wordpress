@@ -1,7 +1,23 @@
+<?php
+get_header()
+?>
 
 
+<section id="page-error" class="align-items-center justify-content-center">
+    <div class="container-fluid">
+        <div class="row text-center justify-content-center ">
+            <div class="col-5">
+                <h6>404, aucune page trouvée !</h6>
+            </div>
+            <div class="col-8">
+                <h6>Mais vous pouvez toujours trouver charlie ?!</h6>
+            </div>
 
-<div class="container">
-    <h1>404, le panier à salade est occupé à autre chose</h1>
-<img src="https://images.bfmtv.com/T9F6_hZfCbVjHvfxav6ANrr7AMY=/0x40:768x472/768x0/images/Le-1er-decembre-2018-la-police-a-interpelle-412-personnes-dont-378-avaient-ete-placees-en-garde-a-vue-lors-de-lacte-3-des-gilets-jaunes-392610.jpg">
-</div>
+        </div>
+    </div>
+</section>
+
+
+<?php
+get_footer()
+?>
