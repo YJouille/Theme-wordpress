@@ -8,30 +8,8 @@ Version: 0.1
 */
 
 
-/**************************************** Fonts **********************************************/
 @font-face {
-    font-family: Roboto;
-    src: url('fonts/roboto-regular-webfont.woff2') format('woff2'),
-         url('fonts/roboto-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: RobotoBlack;
-    src: url('fonts/roboto-black-webfont.woff2') format('woff2'),
-         url('fonts/roboto-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: RobotoBold;
-    src: url('fonts/roboto-bold-webfont.woff2') format('woff2'),
-         url('fonts/roboto-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: GothamMedium;
+    font-family: 'gothammedium';
     src: url('fonts/gothammedium-webfont.woff2') format('woff2'),
          url('fonts/gothammedium-webfont.woff') format('woff');
     font-weight: normal;
@@ -732,6 +710,7 @@ flex-direction: column;
 /**************************************** CONTACT US ********************************/
 
 #titre{
+    font-family: 'gothammedium';
     color: white;
     background-color: #e6003d;
     margin: 0 auto;
@@ -743,7 +722,7 @@ flex-direction: column;
     background-image: url(../media/writingletter.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 5rem;
+    padding: 5rem 10px 5rem 10px;
 }
 
 .contact-form{
@@ -816,8 +795,17 @@ flex-direction: column;
 
 /* MAP OpenStreetMap */
 
-#wpgmza_map{
-    border: solid 3px #e6003d;
+.map{
+    padding: 20px;
+    background-color: #222222;
+    /* border: solid 3px #e6003d; */
+}
+
+#text_map{
+    font-family: 'gothammedium';
+    color: white;
+    background-color: #222222;
+    padding: 0 0 15px 0;
 }
 
 
