@@ -1,5 +1,7 @@
-
-/* Template name: Gabarit Contact */
+<?php
+/* Template name: Gabarit Contact */ 
+include('header.php');
+?>
 
 <h1 id="titre"><?php the_title(); ?></h1>
 <?php the_content(); ?>
@@ -12,9 +14,8 @@
 <?php echo do_shortcode('[ultimate_maps id="1"]')?>
 </div>
 
-<?php if ( is_active_sidebar( 'map' ) ) : ?>
-         <div id="map" class="footer-widget widget-area" role="complementary">
-         <?php dynamic_sidebar( 'map' ); ?>
-         </div>
-         <?php endif; ?>
-<?php get_footer() ?>
+
+
+<?php
+include('footer.php');
+?>
