@@ -118,7 +118,7 @@ a:focus::after{
     background-image: url(../media/writingletter.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 5rem;
+    padding: 5rem 10px 5rem 10px;
 }
 
 .contact-form{
