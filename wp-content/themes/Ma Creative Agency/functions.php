@@ -53,8 +53,8 @@ function wpm_custom_post_type()
 		'hierarchical'        => false,
 		'public'              => true,
 		'has_archive'         => true,
-		// 'menu_position'	=> 3,
-		// 'menu_icon' => 'dashicons-portfolio',
+		'menu_position'	=> 3,
+		'menu_icon' => 'dashicons-portfolio',
 		'rewrite'			  => array( 'slug' => 'projets'),
 
 	);
