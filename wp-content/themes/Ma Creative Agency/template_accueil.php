@@ -60,31 +60,25 @@ $image_header = get_field("image_header");
     </div>
 </section>
 <!-- //////////////////////////SECTION 3 : Projets///////////////////////// -->
-<section id="projects" class="container-fluid d-flex">
-    <style>
-        /* style dans le html pour ajouter la fonctionnalité de changer la couleur du fond */
-        #projects {
-            background-color: #d21242;
-        }
-    </style>
+<section id="projects" class="container-fluid d-flex flex-column justify-content-start g-0 m-0">
+     
     <?php
     ///////////////////////////////////////////////////// boucle pour récupérer les 2 blocs projets
     $args = array(
         'post_type' => 'projets',
+        'posts_per_page' => 2,
     );
 
     $the_query = new WP_Query($args);
     while ($the_query->have_posts()) : $the_query->the_post();
-
     ?>
-
-        <div class="project">
-            <div class="project-content">
+        <div class="project d-flex justify-content-center row g-0">
+            <div class="project-content d-flex flex-column align-items-left justify-content-center col-lg-6   m-0 g-0">
                 <h3><?= get_field('titre_projet') ?></h3>
                 <p><?= get_field('resume_projet') ?></p>
             </div>
 
-            <div class="img-container">
+            <div class="img-container col-lg-6   m-0 g-0">
                 <?php
                 // check if the repeater field has rows of data
                 if (have_rows('images_projet')) :
