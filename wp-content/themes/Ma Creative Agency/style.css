@@ -1,5 +1,5 @@
 /*
-Theme name: Ma creative Agency
+Theme name: CreativeAgency
 Theme URI: http://promo-93.codeur.online/
 Author: ACS Lons le Saunier Yamina Joselito Marley Lucas
 Author URI: https://www.accesscodeschool.fr/
@@ -411,6 +411,8 @@ flex-direction: column;
 
 /**********************************BLOG***************************************/
 
+/* page accueil blog */
+
 #slogan-blog{
     height: 50%;
     display: flex;
@@ -424,23 +426,61 @@ flex-direction: column;
     color: #222222;
     justify-content: center;
     z-index: 1;
-    margin-top: 20vh;
-    font-weight: 400;
+    margin-top: 13vh;
+    margin-bottom: 10vh;
     }
     
     #lettrine-blog{
     position: absolute;
     text-transform: uppercase;
-    font-size: 14rem;
+    font-size: 15rem;
     font-weight: bold;
-    color: #db4168;
+    color: #DA3D64;
     }
-
     #accroche-blog{
-        margin-top: 10vh;
-        font-size: 3.8vh;
-
+        font-size: 5vh;
     }
+
+.article_name{
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+.article_name h5{
+    font-size: 2.2vh;
+    font-weight: 700;
+    color: #db4168;
+    transform: translateY(0px);
+    transition: transform 0.5s;
+}
+.article_name h5:hover{
+    color: #db4168;
+    transform: translateY(-4px);
+    transition: transform 0.5s;
+}
+
+/* page d'un article */
+
+#Page_article{
+    background: #db4168;
+}
+
+.comments__none{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#form_comments h3, #form_comments p{
+    display: flex;
+    justify-content: end;
+}
+#Page_article a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
 
 /**********************************************section projets********************/
 #projects{
@@ -672,13 +712,29 @@ flex-direction: column;
 
 /**************************************** 404 ********************************/
 
+/* page 404 */
+
 #page-error{
     background: url('https://image.noelshack.com/fichiers/2015/25/1434580572-url.jpg');
     background-repeat: no-repeat;
     /* background-size:cover; */
     background-position: left bottom;
     height: 500px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-error .row {
+ margin-bottom: 100px;
+}
+#page-error h6 {
+    font-weight: 700;
+    font-size: 2.5vw;
+    color: rgb(255, 255, 255);
+    background-color: rgb(133, 0, 0);
+    border-radius: 2px;
+}
 
 
 
