@@ -29,11 +29,7 @@ define('DB_NAME', 'wordpressacs');
 define('DB_USER', 'root');
 
 /** Mot de passe de la base de données MySQL. */
-<<<<<<< HEAD
 define('DB_PASSWORD', '');
-=======
-define( 'DB_PASSWORD', '' );
->>>>>>> 49c53558b685ada5601c72c52cf1ea172c3bd2a4
 
 /** Adresse de l’hébergement MySQL. */
 define('DB_HOST', 'localhost');
