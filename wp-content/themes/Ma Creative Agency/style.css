@@ -641,6 +641,7 @@ llllllllllllllllllllllllllllllllllllllll
 /**************************************** CONTACT US ********************************/
 
 #titre{
+    font-family: 'gothammedium';
     color: white;
     background-color: #e6003d;
     margin: 0 auto;
@@ -652,7 +653,8 @@ llllllllllllllllllllllllllllllllllllllll
     background-image: url(../media/writingletter.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 5rem;
+    padding: 5rem 10px 5rem 10px;
+
 }
 
 .contact-form{
@@ -725,10 +727,18 @@ llllllllllllllllllllllllllllllllllllllll
 
 /* MAP OpenStreetMap */
 
-#wpgmza_map{
-    border: solid 3px #e6003d;
+.map{
+    padding: 20px;
+    background-color: #222222;
+    /* border: solid 3px #e6003d; */
 }
 
+#text_map{
+    font-family: 'gothammedium';
+    color: white;
+    background-color: #222222;
+    padding: 0 0 15px 0;
+}
 
 
 
