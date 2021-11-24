@@ -25,14 +25,6 @@ var burgerMenu = document.querySelector("#menu-burger");
 
 
 
-
-
-
-
-
-
-
-
 /*===============================*/
 /*=== Clic sur le menu burger ===*/
 /*===============================*/
@@ -58,15 +50,17 @@ burgerMenu.addEventListener(clickedEvent, function(evt) {
 	// Créé l'effet pour le menu slide (compatible partout)
 	if(mainMenu.getAttribute("class") != "visible") {
 		mainMenu.setAttribute("class", "visible");
+		document.body.style.overflow = "hidden";
 	} else {
 		mainMenu.setAttribute("class", "invisible");
+		document.body.style.overflow = "auto";
 	}
 }, false);
 
 /*===============================*/
 /*=== Swipe avec Touch Events ===*/
 /*===============================*/
-// Si l'écran est plus petit que "x" pixels (optionnel) // 1024px ici
+// Si l'écran est plus petit que  1024px
 if(screen.width <= 900) {
 	var startX = 0; // Position de départ
 	var distance = 100; // 100 px de swipe pour afficher le menu
@@ -109,9 +103,11 @@ if(screen.width <= 900) {
 		// Créé l'effet pour le menu slide (compatible partout)
 		if(Math.abs(between) >= distance && orientation == "ltr" && mainMenu.getAttribute("class") != "visible") {
 			mainMenu.setAttribute("class", "visible");
+			document.body.style.position = "fixed";
 		}
 		if(Math.abs(between) >= distance && orientation == "rtl" && mainMenu.getAttribute("class") != "invisible") {
 			mainMenu.setAttribute("class", "invisible");
+			document.body.style.position = "auto";
 		}
 	}, false);
 }
