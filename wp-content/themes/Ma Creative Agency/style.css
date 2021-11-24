@@ -7,6 +7,16 @@ Description: Thème wordpress créé en groupe comme projet ACS avec: Yamina, Jo
 Version: 0.1
 */
 
+
+@font-face {
+    font-family: 'gothammedium';
+    src: url('fonts/gothammedium-webfont.woff2') format('woff2'),
+         url('fonts/gothammedium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 header{
     display: flex;
     background-image: url(../media/background.png);
@@ -96,6 +106,7 @@ a:focus::after{
 /* CSS Contact us */
 
 #titre{
+    font-family: 'gothammedium';
     color: white;
     background-color: #e6003d;
     margin: 0 auto;
@@ -180,8 +191,17 @@ a:focus::after{
 
 /* MAP OpenStreetMap */
 
-#wpgmza_map{
-    border: solid 3px #e6003d;
+.map{
+    padding: 20px;
+    background-color: #222222;
+    /* border: solid 3px #e6003d; */
+}
+
+#text_map{
+    font-family: 'gothammedium';
+    color: white;
+    background-color: #222222;
+    padding: 0 0 15px 0;
 }
 
 
