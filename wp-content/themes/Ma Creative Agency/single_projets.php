@@ -92,19 +92,8 @@
                 </div>
 
                 <div class="mt-5">
-                <?php
-$prev_post = get_previous_post();
-if($prev_post) {
-   $prev_title = strip_tags(str_replace('"', '', $prev_post->post_title));
-   echo "\t" . '<a rel="prev" href="' . get_permalink($prev_post->ID) . '" title="' . $prev_title. '" class="btn btn-dark">Projet précédent</a>' . "\n";
-}
-
-$next_post = get_next_post();
-if($next_post) {
-   $next_title = strip_tags(str_replace('"', '', $next_post->post_title));
-   echo "\t" . '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class="btn btn-dark">Projet suivant</a>' . "\n";
-}
-?>               
+                    <a href="portfolio-single2.html" class="btn btn-dark">Projet précédent</a>
+                    <a href="portfolio-single4.html" class="btn btn-dark">Projet suivant</a>
                 </div>
             </div>
         </div>

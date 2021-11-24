@@ -68,6 +68,22 @@ function footer_widgets_init()
 {
 
 	register_sidebar(array(
+				'name' => __('Footer Column 1 1_img', 'creativeagency'),
+				'id' => 'footer_1_img',
+				'before_widget' => '<div class="footer-widget">',
+				'after_widget' => '</div>',
+				'before_title' => '<h3>',
+				'after_title' => '</h3>',
+	));
+	register_sidebar(array(
+				'name' => __('Footer Column 2 1_img', 'creativeagency'),
+				'id' => 'footer_2_img',
+				'before_widget' => '<div class="footer-widget">',
+				'after_widget' => '</div>',
+				'before_title' => '<h3>',
+				'after_title' => '</h3>',
+			));
+	register_sidebar(array(
 				'name' => __('Footer Column 1 1', 'creativeagency'),
 				'id' => 'footer_1',
 				'before_widget' => '<div class="footer-widget">',
