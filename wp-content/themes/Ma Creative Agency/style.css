@@ -8,6 +8,7 @@ Version: 0.1
 */
 
 
+<<<<<<< HEAD
 /**************************************** Fonts **********************************************/
 @font-face {
     font-family: Roboto;
@@ -32,6 +33,10 @@ Version: 0.1
 }
 @font-face {
     font-family: GothamMedium;
+=======
+@font-face {
+    font-family: 'gothammedium';
+>>>>>>> a6cf1e26e2468804614611967dbf6149f97e7d96
     src: url('fonts/gothammedium-webfont.woff2') format('woff2'),
          url('fonts/gothammedium-webfont.woff') format('woff');
     font-weight: normal;
