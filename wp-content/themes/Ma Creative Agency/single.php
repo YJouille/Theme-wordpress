@@ -1,7 +1,7 @@
 <?php get_header() ?>
 <section id="Page_article">
-    <div class="container ">
-        <div class="row justify-content-center my-5">
+    <!-- <div class="container ">
+        <div class="row justify-content-center my-5"> -->
             <?php if (have_posts()) :
 
                 while (have_posts()) : the_post(); ?>
@@ -12,10 +12,12 @@
                     </div>
             <?php endwhile;
             endif; ?>
+
             <?php
             comments_template(); // Par ici les commentaires 
             ?>
-        </div>
-    </div>
+            
+        <!-- </div>
+    </div> -->
 </section>
 <?php get_footer() ?>

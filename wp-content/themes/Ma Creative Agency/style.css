@@ -8,7 +8,6 @@ Version: 0.1
 */
 
 
-<<<<<<< HEAD
 /**************************************** Fonts **********************************************/
 @font-face {
     font-family: Roboto;
@@ -33,10 +32,6 @@ Version: 0.1
 }
 @font-face {
     font-family: GothamMedium;
-=======
-@font-face {
-    font-family: 'gothammedium';
->>>>>>> a6cf1e26e2468804614611967dbf6149f97e7d96
     src: url('fonts/gothammedium-webfont.woff2') format('woff2'),
          url('fonts/gothammedium-webfont.woff') format('woff');
     font-weight: normal;
@@ -375,6 +370,13 @@ flex-direction: column;
     margin-bottom: 10vh;
 }
 
+@media (max-width: 350px) {
+    #slogan-agence h2{
+    font-size: calc(1rem + .10vw);
+}
+}
+
+
 #lettrine-agence{
     position: absolute;
     text-transform: uppercase;
@@ -593,12 +595,28 @@ llllllllllllllllllllllllllllllllllllllll
     display: flex;
     justify-content: center;
     margin-top: 50px;
-}
+    }
 #form_comments h3, #form_comments p{
     display: flex;
     justify-content: end;
+    }
+#form_comments textarea{
+    width: 400px;
+    height: 150px;
+    }
+#form_comments form{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    }
+.comment_btn{
+    background-color: #1c2833;
+    border: none;
 }
-
+.comment_btn:hover, .comment_btn:focus{
+    background-color: #d21242;
+    border: none;
+}
 
 
 /*************************************** FOOTER *********************************/
@@ -659,6 +677,7 @@ llllllllllllllllllllllllllllllllllllllll
     background-repeat: no-repeat;
     background-size: cover;
     padding: 5rem 10px 5rem 10px;
+
 }
 
 .contact-form{

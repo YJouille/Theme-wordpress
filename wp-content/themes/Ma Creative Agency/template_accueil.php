@@ -131,7 +131,7 @@ $posts = get_posts([
         <div class="row">
             <?php if ($posts) {
                 foreach ($posts as $post) {
-                    $post_title = str_replace("-", " ", $post->post_name);
+                    $post_title = $post->post_title;
                     $post_guid = $post->guid;
                     $post_excerpt = $post->post_excerpt;
             ?>

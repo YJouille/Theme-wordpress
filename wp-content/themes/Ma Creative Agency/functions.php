@@ -51,8 +51,8 @@ function wpm_custom_post_type()
 		'hierarchical'        => false,
 		'public'              => true,
 		'has_archive'         => true,
-		// 'menu_position'	=> 3,
-		// 'menu_icon' => 'dashicons-portfolio',
+		'menu_position'	=> 3,
+		'menu_icon' => 'dashicons-portfolio',
 		'rewrite'			  => array( 'slug' => 'projets'),
 
 	);
@@ -67,6 +67,14 @@ add_action('init', 'wpm_custom_post_type', 0);
 function footer_widgets_init()
 {
 
+	register_sidebar(array(
+				'name' => __('Footer Column 1 1_img', 'creativeagency'),
+				'id' => 'footer_1_img',
+				'before_widget' => '<div class="footer-widget">',
+				'after_widget' => '</div>',
+				'before_title' => '<h3>',
+				'after_title' => '</h3>',
+	));
 	register_sidebar(array(
 				'name' => __('Footer Column 2 1_img', 'creativeagency'),
 				'id' => 'footer_2_img',
@@ -116,6 +124,8 @@ function footer_widgets_init()
 		'after_title' => '</h3>',
 	));
 }
+
+
 
 add_action('widgets_init', 'footer_widgets_init');
 
